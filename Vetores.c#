@@ -1,0 +1,35 @@
+using System;
+
+using System.Globalization; 
+
+class MainClass {
+  public static void Main (string[] args) {
+    
+    CultureInfo CI = CultureInfo.InvariantCulture;
+
+    int x; 
+
+    Console.WriteLine ("Quantos números deseja digitar?");
+    x = int.Parse (Console.ReadLine());
+
+    double[] vetor = new double[x]; // É assim que se cria um vetor em C# (muito semelhante ao Java)
+
+    for (int i = 0; i < x; i++){
+
+      Console.WriteLine ("Digite um número: ");
+      vetor[i] = double.Parse(Console.ReadLine(), CI);
+
+
+    }
+
+    Console.WriteLine(); 
+    Console.WriteLine("OS NÚMEROS DIGITADOS FORAM: ");
+
+    for (int i = 0; i < x; i++){
+
+      Console.WriteLine(vetor[i]);
+      
+    }
+
+  }
+}
